@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Fantasy Copilot is a personal fantasy football decision-support tool for the owner's Yahoo Fantasy leagues.">
+  <meta name="theme-color" content="#f7f8fc" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)">
+  <title>Fantasy Copilot</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Fantasy Copilot home">
+      <span class="brand-mark" aria-hidden="true">FC</span>
+      <span>Fantasy Copilot</span>
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="/privacy/">Privacy</a>
+      <a href="/terms/">Terms</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="eyebrow">Personal project · single user · not a commercial service</div>
+      <h1 id="hero-title">Make the call with better context.</h1>
+      <p class="lede">A personal fantasy football decision-support tool for my own Yahoo Fantasy leagues.</p>
+      <p class="status"><span aria-hidden="true"></span>Yahoo API access: pending approval</p>
+    </section>
+
+    <section class="content-grid" aria-label="About Fantasy Copilot">
+      <article class="card">
+        <p class="section-number" aria-hidden="true">01</p>
+        <h2>What it does</h2>
+        <ul>
+          <li>Tracks my live Yahoo draft and suggests picks from my own rankings and draft strategy.</li>
+          <li>Estimates which players are likely to still be available at my next pick.</li>
+          <li>In season: waiver and free-agent analysis, injury and depth-chart news for my roster.</li>
+          <li>Explains every recommendation—I make the final call, always in Yahoo.</li>
+        </ul>
+      </article>
+
+      <article class="card card-accent">
+        <p class="section-number" aria-hidden="true">02</p>
+        <h2>How it uses Yahoo Fantasy</h2>
+        <ul>
+          <li>Connects through the official Yahoo Fantasy Sports API using OAuth, <strong>read-only</strong>.</li>
+          <li>Reads only leagues I’m a member of: league settings, rosters, draft results, transactions, and player data.</li>
+          <li><strong>Never</strong> makes draft picks, roster moves, waiver claims, or trades on my behalf.</li>
+          <li>Uses data solely to generate recommendations for me. It is not shared, sold, or used for any other purpose.</li>
+          <li>Stores Yahoo tokens server-side, encrypted, and never exposes them to the browser.</li>
+        </ul>
+      </article>
+    </section>
+
+    <aside class="attribution" aria-label="Data attribution">
+      <span class="attribution-icon" aria-hidden="true">Y!</span>
+      <p><strong>Fantasy data provided by Yahoo Fantasy.</strong><br>Official data, used only for the owner’s personal recommendations.</p>
+    </aside>
+  </main>
+
+  <footer>
+    <div class="footer-links"><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></div>
+    <p>Not affiliated with or endorsed by Yahoo or the NFL.</p>
+    <p>© 2026 Fantasy Copilot</p>
+  </footer>
+</body>
+</html>
