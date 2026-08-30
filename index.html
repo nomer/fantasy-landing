@@ -3,66 +3,94 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Fantasy Copilot is a personal fantasy football decision-support tool for the owner's Yahoo Fantasy leagues.">
-  <meta name="theme-color" content="#f7f8fc" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)">
-  <title>Fantasy Copilot</title>
+  <meta name="description" content="Personal software projects: homelab automation, small tools, and Fantasy Copilot — a private assistant for the owner's own Yahoo Fantasy leagues.">
+  <meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0e1116" media="(prefers-color-scheme: dark)">
+  <title>Software · nomerr</title>
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="/" aria-label="Fantasy Copilot home">
-      <span class="brand-mark" aria-hidden="true">FC</span>
-      <span>Fantasy Copilot</span>
+    <a class="brand" href="/" aria-label="Home">
+      <span class="brand-mark" aria-hidden="true">~/</span>
+      <span>nomerr<span class="brand-dim">/software</span></span>
     </a>
     <nav aria-label="Primary navigation">
+      <a href="#fantasy-copilot">Fantasy Copilot</a>
       <a href="/privacy/">Privacy</a>
       <a href="/terms/">Terms</a>
     </nav>
   </header>
 
   <main>
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="eyebrow">Personal project · single user · not a commercial service</div>
-      <h1 id="hero-title">Make the call with better context.</h1>
-      <p class="lede">A personal fantasy football decision-support tool for my own Yahoo Fantasy leagues.</p>
-      <p class="status"><span aria-hidden="true"></span>Yahoo API access: pending approval</p>
+    <section class="intro" aria-labelledby="intro-title">
+      <h1 id="intro-title">Software</h1>
+      <p>Personal projects I build and run for myself. These are utilities, not products — nothing on this page is offered as a service, sold, or open for signups.</p>
     </section>
 
-    <section class="content-grid" aria-label="About Fantasy Copilot">
-      <article class="card">
-        <p class="section-number" aria-hidden="true">01</p>
-        <h2>What it does</h2>
-        <ul>
-          <li>Tracks my live Yahoo draft and suggests picks from my own rankings and draft strategy.</li>
-          <li>Estimates which players are likely to still be available at my next pick.</li>
-          <li>In season: waiver and free-agent analysis, injury and depth-chart news for my roster.</li>
-          <li>Explains every recommendation—I make the final call, always in Yahoo.</li>
-        </ul>
-      </article>
+    <article class="project" id="fantasy-copilot" aria-labelledby="fc-title">
+      <div class="project-head">
+        <h2 id="fc-title">Fantasy Copilot</h2>
+        <div class="chips" aria-label="Project status">
+          <span class="chip chip-live">in development</span>
+          <span class="chip">Yahoo API access pending</span>
+          <span class="chip">private · single user</span>
+        </div>
+      </div>
+      <p class="project-lede">A private assistant for my own Yahoo Fantasy Football leagues. It follows my draft, weighs the board against my personal rankings and strategy, and explains its suggestions — every actual pick and roster move happens in Yahoo, made by me.</p>
 
-      <article class="card card-accent">
-        <p class="section-number" aria-hidden="true">02</p>
-        <h2>How it uses Yahoo Fantasy</h2>
-        <ul>
-          <li>Connects through the official Yahoo Fantasy Sports API using OAuth, <strong>read-only</strong>.</li>
-          <li>Reads only leagues I’m a member of: league settings, rosters, draft results, transactions, and player data.</li>
-          <li><strong>Never</strong> makes draft picks, roster moves, waiver claims, or trades on my behalf.</li>
-          <li>Uses data solely to generate recommendations for me. It is not shared, sold, or used for any other purpose.</li>
-          <li>Stores Yahoo tokens server-side, encrypted, and never exposes them to the browser.</li>
-        </ul>
-      </article>
+      <div class="grid2">
+        <section class="panel" aria-labelledby="fc-scope">
+          <h3 id="fc-scope">Scope</h3>
+          <ul>
+            <li>Tracks my live Yahoo draft and suggests picks from my own rankings and draft strategy.</li>
+            <li>Estimates which players are likely to still be available at my next pick.</li>
+            <li>In season: waiver and free-agent analysis plus injury and depth-chart news for my roster.</li>
+            <li>Explains every recommendation; the final call is always mine, made in Yahoo.</li>
+          </ul>
+        </section>
+
+        <section class="panel" aria-labelledby="fc-yahoo">
+          <h3 id="fc-yahoo">Yahoo Fantasy integration</h3>
+          <ul>
+            <li>Connects through the official Yahoo Fantasy Sports API using OAuth, <strong>read-only</strong>.</li>
+            <li>Reads only leagues I’m a member of: league settings, rosters, draft results, transactions, and player data.</li>
+            <li><strong>Never</strong> makes draft picks, roster moves, waiver claims, or trades on my behalf.</li>
+            <li>Uses data solely to generate recommendations for me. It is not shared, sold, or used for any other purpose.</li>
+            <li>Stores Yahoo tokens server-side, encrypted, and never exposes them to the browser.</li>
+          </ul>
+        </section>
+      </div>
+
+      <aside class="attribution" aria-label="Data attribution">
+        <p><strong>Fantasy data provided by Yahoo Fantasy.</strong></p>
+        <p class="attribution-links"><a href="/privacy/">Privacy policy</a> · <a href="/terms/">Terms &amp; disclaimer</a></p>
+      </aside>
+    </article>
+
+    <section class="others" aria-labelledby="others-title">
+      <h2 id="others-title">Other projects</h2>
+      <ul class="proj-list">
+        <li class="proj">
+          <div class="proj-name">homelab <span class="tag">private</span></div>
+          <p class="proj-desc">Ansible roles and Terraform stacks that run a personal homelab: Proxmox virtual machines, an HA k3s cluster, DNS and tunnels.</p>
+        </li>
+        <li class="proj">
+          <div class="proj-name"><a href="https://github.com/nomer/ticketmaster-events" rel="noopener">ticketmaster-events</a> <span class="tag">github</span></div>
+          <p class="proj-desc">REST wrapper for the Ticketmaster Discovery API with caching and Google Sheets integration.</p>
+        </li>
+        <li class="proj">
+          <div class="proj-name"><a href="https://github.com/nomer/tradovate-indicators" rel="noopener">tradovate-indicators</a> <span class="tag">github</span></div>
+          <p class="proj-desc">Custom chart indicators for the Tradovate futures platform.</p>
+        </li>
+      </ul>
     </section>
-
-    <aside class="attribution" aria-label="Data attribution">
-      <p><strong>Fantasy data provided by Yahoo Fantasy.</strong></p>
-    </aside>
   </main>
 
   <footer>
     <div class="footer-links"><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></div>
-    <p>Not affiliated with or endorsed by Yahoo or the NFL.</p>
-    <p>© 2026 Fantasy Copilot</p>
+    <p>Personal, non-commercial software. Not affiliated with or endorsed by Yahoo or the NFL.</p>
+    <p>Fantasy data provided by Yahoo Fantasy. © 2026</p>
   </footer>
 </body>
 </html>
